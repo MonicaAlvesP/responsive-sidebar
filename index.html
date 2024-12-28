@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Responsive Sidebar</title>
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+    <div class="logo">
+      <img src="https://img.icons8.com/?size=100&id=PCseCpSA9uvz&format=png&color=000000" alt="Logo">
+      <h6>Responsive Menu</h6>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li>
+          <a href="#services">Services</a>
+          <ul class="submenu">
+            <li><a href="#web-design">Web Design</a></li>
+            <li><a href="#seo">SEO</a></li>
+            <li><a href="#marketing">Marketing</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="main-content" id="main-content">
+    <header>
+      <button id="menu-toggle">☰</button>
+      <h1>Responsive Sidebar</h1>
+    </header>
+  </div>
+  
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.getElementById('main-content');
+
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      mainContent.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
